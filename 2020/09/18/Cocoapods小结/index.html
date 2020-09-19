@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Cocoapods小结 | BestFly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是我第一篇博客，不知道从哪里开始，一脸茫然。只能以小结的形式梳理自己日常工作所积累的点点滴滴。 Cocoapods安装： 更换源  12gem sources --remove https:&#x2F;&#x2F;rubygems.org&#x2F;gem sources --add https:&#x2F;&#x2F;gems.ruby-china.com&#x2F;  安装  12sudo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cocoapods小结">
+<meta property="og:url" content="http://example.com/2020/09/18/Cocoapods%E5%B0%8F%E7%BB%93/index.html">
+<meta property="og:site_name" content="BestFly">
+<meta property="og:description" content="这是我第一篇博客，不知道从哪里开始，一脸茫然。只能以小结的形式梳理自己日常工作所积累的点点滴滴。 Cocoapods安装： 更换源  12gem sources --remove https:&#x2F;&#x2F;rubygems.org&#x2F;gem sources --add https:&#x2F;&#x2F;gems.ruby-china.com&#x2F;  安装  12sudo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-18T10:01:26.000Z">
+<meta property="article:modified_time" content="2020-09-19T07:57:55.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="BestFly" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">BestFly</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Cocoapods小结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/18/Cocoapods%E5%B0%8F%E7%BB%93/" class="article-date">
+  <time datetime="2020-09-18T10:01:26.000Z" itemprop="datePublished">2020-09-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Cocoapods小结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是我第一篇博客，不知道从哪里开始，一脸茫然。只能以小结的形式梳理自己日常工作所积累的点点滴滴。</p>
+<h5 id="Cocoapods安装："><a href="#Cocoapods安装：" class="headerlink" title="Cocoapods安装："></a>Cocoapods安装：</h5><ul>
+<li>更换源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem sources --remove https:&#x2F;&#x2F;rubygems.org&#x2F;</span><br><span class="line">gem sources --add https:&#x2F;&#x2F;gems.ruby-china.com&#x2F;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install -n &#x2F;usr&#x2F;local&#x2F;bin cocoapods</span><br><span class="line">pod setup  从镜像源中下载podspec索引文件到～&#x2F;cocoapods&#x2F;repo</span><br></pre></td></tr></table></figure>
+<h5 id="Podfile语法"><a href="#Podfile语法" class="headerlink" title="Podfile语法"></a>Podfile语法</h5><p><a target="_blank" rel="noopener" href="https://guides.cocoapods.org/syntax/podfile.html#platform">官方语法</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">source &#39;https:&#x2F;&#x2F;github.com&#x2F;CocoaPods&#x2F;Specs.git&#39;</span><br><span class="line"></span><br><span class="line">platform :ios, &#39;6.0&#39;</span><br><span class="line">inhibit_all_warnings! &#x2F;&#x2F;忽略警告</span><br><span class="line"></span><br><span class="line">xcodeproj &#39;MyProject&#39;</span><br><span class="line"></span><br><span class="line">pod &#39;ObjectiveSugar&#39;, &#39;~&gt; 0.5&#39;</span><br><span class="line"></span><br><span class="line">target &#39;MyProject&#39; do</span><br><span class="line">  pod &#39;OCMock&#39;, &#39;~&gt; 2.0.1&#39;</span><br><span class="line">  pod &#39;PonyDebugger&#39;, :configurations &#x3D;&gt; [&#39;Debug&#39;, &#39;Beta&#39;]</span><br><span class="line">  pod &#39;PonyDebugger&#39;, :configuration &#x3D;&gt; &#39;Debug&#39;</span><br><span class="line">  pod &#39;SSZipArchive&#39;, :modular_headers &#x3D;&gt; true</span><br><span class="line">  pod &#39;PonyDebugger&#39;, :source &#x3D;&gt; &#39;https:&#x2F;&#x2F;github.com&#x2F;CocoaPods&#x2F;Specs.git&#39;</span><br><span class="line">  pod &#39;QueryKit&#39;, :subspecs &#x3D;&gt; [&#39;Attribute&#39;, &#39;QuerySet&#39;]</span><br><span class="line">  pod &#39;QueryKit&#x2F;Attribute&#39;</span><br><span class="line">  pod &#39;AFNetworking&#39;, :path &#x3D;&gt; &#39;~&#x2F;Documents&#x2F;AFNetworking&#39;</span><br><span class="line">  pod &#39;AFNetworking&#39;, :git &#x3D;&gt; &#39;https:&#x2F;&#x2F;github.com&#x2F;gowalla&#x2F;AFNetworking.git&#39;, :branch &#x3D;&gt; &#39;dev&#39;</span><br><span class="line">  pod &#39;AFNetworking&#39;, :git &#x3D;&gt; &#39;https:&#x2F;&#x2F;github.com&#x2F;gowalla&#x2F;AFNetworking.git&#39;, :tag &#x3D;&gt; &#39;0.7.0&#39;</span><br><span class="line">  pod &#39;AFNetworking&#39;, :git &#x3D;&gt; &#39;https:&#x2F;&#x2F;github.com&#x2F;gowalla&#x2F;AFNetworking.git&#39;, :commit &#x3D;&gt; &#39;082f8319af&#39;</span><br><span class="line">  pod &#39;JSONKit&#39;, :podspec &#x3D;&gt; &#39;https:&#x2F;&#x2F;example.com&#x2F;JSONKit.podspec&#39;</span><br><span class="line">  pod &#39;SSZipArchive&#39;, :inhibit_warnings &#x3D;&gt; true</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">post_install do |installer|</span><br><span class="line">  installer.pods_project.targets.each do |target|</span><br><span class="line">    puts #&#123;target.name&#125;</span><br><span class="line">  end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h5 id="Cocoapods进阶"><a href="#Cocoapods进阶" class="headerlink" title="Cocoapods进阶"></a>Cocoapods进阶</h5><ul>
+<li>安装不同版本的cocoapods</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods -v 0.39.0 -n &#x2F;usr&#x2F;local&#x2F;bin 安装指定版本的cocoapods</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不同cocoapods版本之间的切换</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://bundler.io/">Bundler</a> 是一个 Ruby 项目的管理工具,可以用来管理cocoapods不同版本的切换。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gem install bundler</span><br><span class="line">bundle init  该方法执行后会生成Gemfile和Gemfile.lock文件</span><br><span class="line">bundle install</span><br><span class="line">bundle exec pod install</span><br></pre></td></tr></table></figure>
+
+<p>Gemfile文件语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &quot;https:&#x2F;&#x2F;rubygems.org&quot;</span><br><span class="line">gem &#39;cocoapods&#39;,&#39;1.4.0&#39;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>多版本ruby管理</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -L get.rvm.io | bash -s stable &amp;&amp; source ~&#x2F;.rvm&#x2F;scripts&#x2F;rvm</span><br><span class="line">rvm list known</span><br><span class="line">rvm install 2.6.3</span><br><span class="line">rvm use &lt;Version&gt;</span><br><span class="line">rvm use &lt;Version&gt; --default，可设置默认 ruby 版本</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一些常用命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo gem uninstall cocoapods -v 0.39.0</span><br><span class="line">pod cache clean --all或者指定某个库</span><br><span class="line">pod cache list</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/09/18/Cocoapods%E5%B0%8F%E7%BB%93/" data-id="ckf9ercb70000ivjd6ol79uo6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/19/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/09/19/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B0%8F%E7%BB%93/">Hexo搭建博客小结</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/19/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/18/Cocoapods%E5%B0%8F%E7%BB%93/">Cocoapods小结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
