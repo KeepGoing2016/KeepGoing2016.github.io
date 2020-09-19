@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: BestFly
+subtitle: '业精于勤荒于嬉，行成于思毁于随'
 description: ''
 keywords:
 author: John Doe
@@ -103,4 +103,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: 'git'
+  repo: https://github.com/KeepGoing2016/KeepGoing2016.github.io
+  branch: [gh-pages]
